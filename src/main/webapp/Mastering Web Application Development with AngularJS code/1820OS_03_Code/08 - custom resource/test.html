@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html ng-app="elementExample">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
+</head>
+
+<body>
+<div id="test">博弈网络科技</div>
+
+<div>
+    angular.extend
+    <input type="button" onclick="button1()" value="比较值"></input>
+</div>
+<br>
+
+<script>
+
+    function button1(){
+        var obj1 = {name:"tom", password:"123456",person:{isPerson:"y",object:{name:"obj"}}};
+        var obj2 = {name:"tom1", password:"123456",person:{isPerson:"y",object:{name:"obj"}}};
+
+//        var dst = angular.extend({sex:"female"},obj1);
+//        alert("dst:"+JSON.stringify(dst));
+//        alert("obj1:"+JSON.stringify(obj1));
+
+
+
+
+        var dst=angular.extend({a:1},obj1,obj2);
+        alert(dst.name);
+
+    }
+
+</script>
+
+</body>
+</html>

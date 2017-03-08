@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
+    <script src="listAndDetails.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="repeater.css" rel="stylesheet">
+    <script>
+        function* fib(max) {
+            var
+                    t,
+                    a = 0,
+                    b = 1,
+                    n = 1;
+            while (n < max) {
+
+                yield a;
+                t = a + b;
+                a = b;
+                b = t;
+                n ++;
+            }
+            return a;
+        };
+        var f=fib(10);
+        console.log(f.next());
+//        console.log(f.nextAll());
+//        alert(fib(10).length);
+//        for (var x of fib(10)) {
+//            console.log(x); // 依次输出0, 1, 1, 2, 3
+//        }
+    </script>>
+
+</head>
+<body ng-app="listAndDetails">
+
+<div>
+    <table class="table table-bordered" ng-controller="ListAndOneDetailCtrl">
+        <thead>
+            <tr>
+                <th>Name {{users.length}}000</th>
+                <th>e-mail</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="user in users" ng-click="selectUser(user)" ng-switch on="isSelected(user)">
+        <tr>
+            <td>{{user.name}}111</td>
+            <td>{{user.email}}222</td>
+        </tr>
+        <tr ng-switch-when="true" class="light-gray">
+            <td colspan="2">{{user.desc}}333</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div ng-controller="ListAndManyDetailsCtrl">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>e-mail</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="user in users" ng-controller="UserCtrl" ng-click="toggleSelected()" ng-switch on="isSelected()">
+        <tr>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+        </tr>
+        <tr ng-switch-when="true" class="light-gray">
+            <td colspan="2">{{user.desc}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+</body>
+</html>

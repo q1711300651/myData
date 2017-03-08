@@ -1,0 +1,4 @@
+//常用函数
+TRIM
+RTRIM
+LTRIM

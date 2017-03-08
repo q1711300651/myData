@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="myApp" >
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Plunker</title>
+  <script>document.write("<base href=\"" + document.location + "\" />");</script>
+  <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+  <label>Select a letter (auto generated empty option)</label>
+  <select ng-model="letter" ng-options="letter for letter in letters"></select>
+  Selected Letter: {{ letter }} ({{ getType(letter) }})
+
+  <label>Select a letter (custom empty option)</label>
+  <select ng-model="letter" ng-options="letter for letter in letters">
+    <option value="">--</option>
+  </select>
+  Selected Letter: {{ letter }} ({{ getType(letter) }})
+
+<ul>
+  <li ng-repeat="banner in banners" >
+    {{banner.url}}
+    <a style="background-image:"+ banner.photoPath>
+
+    </a>
+
+  </li>
+</ul>
+</body>
+</html>
