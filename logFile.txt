@@ -73,3 +73,48 @@
 [http-bio-9999-exec-4] DEBUG com.ww.service.impl.UserServiceImpl - debu....
 [http-bio-9999-exec-2] INFO com.ww.service.impl.UserServiceImpl - userid is null
 [http-bio-9999-exec-2] DEBUG com.ww.service.impl.UserServiceImpl - debu....
+[http-bio-9999-exec-1] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-1] DEBUG com.ww.service.impl.UserServiceImpl - debu....
+[http-bio-9999-exec-10] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-10] DEBUG com.ww.service.impl.UserServiceImpl - debu....
+[http-bio-9999-exec-5] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-5] DEBUG com.ww.service.impl.UserServiceImpl - debu....
+[http-bio-9999-exec-5] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-5] DEBUG com.ww.service.impl.UserServiceImpl - debu....
+[http-bio-9999-exec-8] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-8] DEBUG com.ww.service.impl.UserServiceImpl - debu....
+[http-bio-9999-exec-10] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-10] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-5] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-10] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-10] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-10] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-5] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-3] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-10] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-9] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-10] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-4] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-2] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-2] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-10] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-10] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-5] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-5] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-5] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-5] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-5] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-8] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-8] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-8] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-8] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-10] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-5] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-5] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-1] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-1] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-1] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-1] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-1] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-3] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-2] INFO com.ww.service.impl.UserServiceImpl - userid is null

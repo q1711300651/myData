@@ -4,7 +4,6 @@ import com.ww.entity.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
 @Repository("userDao")
 public interface UserDao {
 

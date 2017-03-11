@@ -9,12 +9,6 @@ var UserController = function($scope, $http) {
             $scope.users = userList;
         });
     };
-$scope.test=function(){
-	alert("11");
-	$http.post('users/test').success(function(){
-		$scope.fetchUserList();
-	});
-}
     $scope.addNewUser = function(newUser) {
         $http.post('users/addUser/' + newUser).success(function() {
             $scope.fetchUsersList();

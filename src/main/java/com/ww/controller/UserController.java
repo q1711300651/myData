@@ -44,11 +44,11 @@ public class UserController {
         userService.deleteAll();
     }
 
-    @RequestMapping(value = "/test", method = RequestMethod.POST)
+    @RequestMapping(value = "/test")
     public
     @ResponseBody
-    String test(List<String> list) {
-        return "test";
+    String test() {
+        return "users/test";
     }
 
     @RequestMapping("/layout")

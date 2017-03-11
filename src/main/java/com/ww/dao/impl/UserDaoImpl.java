@@ -10,6 +10,7 @@ import java.util.List;
 /**
  * Created by ww on 17/3/11.
  */
+//@Repository("userDao")
 @Log4j
 public class UserDaoImpl extends BaseDaoImpl implements UserDao {
     @Override
