@@ -1,0 +1,28 @@
+package com.ww.common;
+
+/**
+ * Created by ww on 17/3/11.
+ */
+public class PageParam {
+    private int offsetPara = 0;
+    private int limitPara = 10;
+
+    public PageParam() {
+    }
+
+    public int getOffsetPara() {
+        return this.offsetPara;
+    }
+
+    public void setOffsetPara(int offsetPara) {
+        this.offsetPara = offsetPara;
+    }
+
+    public int getLimitPara() {
+        return this.limitPara;
+    }
+
+    public void setLimitPara(int limitPara) {
+        this.limitPara = limitPara;
+    }
+}

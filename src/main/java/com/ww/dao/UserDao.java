@@ -1,9 +1,11 @@
 package com.ww.dao;
 
+import com.ww.entity.User;
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 
-import com.ww.entity.User;
-
+@Repository("userDao")
 public interface UserDao {
 
 	public User login(User user);

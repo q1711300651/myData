@@ -12,7 +12,13 @@
 	<mvc:annotation-driven />
 
     <mvc:resources mapping="/resources/**" location="/resources/" />
-
+<mvc:interceptors>
+    <mvc:interceptor>
+        <mvc:mapping path="/users/*"/>
+        <mvc:exclude-mapping path="/test/*"></mvc:exclude-mapping>
+        <bean class="com.ww.interceptor.UserInterceptor"></bean>
+    </mvc:interceptor>
+</mvc:interceptors>
 	<bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
         <property name="resourceLoaderPath" value="/WEB-INF/html/"/>
     </bean>

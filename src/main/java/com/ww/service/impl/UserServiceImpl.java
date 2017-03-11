@@ -3,12 +3,14 @@ package com.ww.service.impl;
 import com.ww.dao.UserDao;
 import com.ww.entity.User;
 import com.ww.service.UserService;
+import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
 
 @Service("userService")
+@Log4j
 public class UserServiceImpl implements UserService {
 
     //public List<User> userList = getAllUsers();
@@ -26,6 +28,7 @@ public class UserServiceImpl implements UserService {
 
 
     public List<User> getAllUsers() {
+        log.info("userid is null");
         return userDao.getAllUsers();
     }
 

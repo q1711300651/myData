@@ -61,3 +61,15 @@
 [RMI TCP Connection(2)-127.0.0.1] INFO org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'springMVC': initialization completed in 1918 ms
 [localhost-startStop-2] INFO org.springframework.web.context.support.XmlWebApplicationContext - Closing WebApplicationContext for namespace 'springMVC-servlet': startup date [Sun Dec 25 22:54:06 CST 2016]; parent: Root WebApplicationContext
 [localhost-startStop-2] INFO org.springframework.web.context.support.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sun Dec 25 22:54:04 CST 2016]; root of context hierarchy
+[http-bio-9999-exec-4] INFO com.ww.service.impl.UserServiceImpl - testloginmysql
+[main] INFO testLog.Log4jDemo - info
+[main] INFO testLog.Log4jDemo - info
+[main] INFO testLog.Log4jDemo - info
+[main] DEBUG testLog.Log4jDemo - debug-demo
+[main] INFO testLog.Log4jDemo - info
+[http-bio-9999-exec-5] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-5] DEBUG com.ww.service.impl.UserServiceImpl - debu....
+[http-bio-9999-exec-4] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-4] DEBUG com.ww.service.impl.UserServiceImpl - debu....
+[http-bio-9999-exec-2] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-2] DEBUG com.ww.service.impl.UserServiceImpl - debu....
