@@ -28,7 +28,6 @@ public class UserServiceImpl implements UserService {
 
 
     public List<User> getAllUsers() {
-        log.info("userid is null");
         return userDao.getAllUsers();
     }
 

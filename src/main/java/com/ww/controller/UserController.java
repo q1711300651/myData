@@ -45,10 +45,8 @@ public class UserController {
     }
 
     @RequestMapping(value = "/test")
-    public
-    @ResponseBody
-    String test() {
-        return "users/test";
+    public String test() {
+        return "users/test1";
     }
 
     @RequestMapping("/layout")

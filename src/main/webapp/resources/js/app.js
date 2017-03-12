@@ -12,6 +12,9 @@ App.config(['$routeProvider','$locationProvider', function ($routeProvider,$loca
     }).when('/test',{
         templateUrl:'users/test',
         controller:UserController
+    }).when('/test1',{
+        templateUrl:'/resources/test1.html',
+        controller:UserController
     });
         // .when('/test123'),{templateUrl:'users/test.html',controller:TestController};
 
