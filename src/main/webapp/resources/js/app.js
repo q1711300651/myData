@@ -12,7 +12,7 @@ App.config(['$routeProvider','$locationProvider', function ($routeProvider,$loca
     }).when('/test',{
         templateUrl:'users/test',
         controller:UserController
-    }).when('/test1',{
+    }).when('/login',{
         templateUrl:'/resources/test1.html',
         controller:UserController
     });
