@@ -128,3 +128,27 @@
 [http-bio-9999-exec-5] INFO com.ww.service.impl.UserServiceImpl - userid is null
 [http-bio-9999-exec-2] INFO com.ww.service.impl.UserServiceImpl - userid is null
 [http-bio-9999-exec-6] INFO com.ww.service.impl.UserServiceImpl - userid is null
+[http-bio-9999-exec-9] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-8] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-7] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-10] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-5] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-2] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-8] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-4] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-10] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-11] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-2] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-3] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-5] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-9] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-9] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-8] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-8] DEBUG freemarker.cache - Compiling FreeMarker template "test.ftl"["zh_CN",UTF-8,parsed]  from "/Users/ww/mygit/myData/target/myData/WEB-INF/templates/test.ftl"
+[http-bio-9999-exec-9] DEBUG freemarker.cache - Compiling FreeMarker template "test.ftl"["zh_CN",UTF-8,parsed]  from "/Users/ww/mygit/myData/target/myData/WEB-INF/templates/test.ftl"
+[http-bio-9999-exec-11] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-11] DEBUG freemarker.cache - Compiling FreeMarker template "test.ftl"["zh_CN",UTF-8,parsed]  from "/Users/ww/mygit/myData/target/myData/WEB-INF/templates/test.ftl"
+[http-bio-9999-exec-11] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-11] DEBUG freemarker.cache - Compiling FreeMarker template "test.ftl"["zh_CN",UTF-8,parsed]  from "/Users/ww/mygit/myData/target/myData/WEB-INF/templates/test.ftl"
+[http-bio-9999-exec-17] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-9999-exec-17] DEBUG freemarker.cache - Compiling FreeMarker template "test.ftl"["zh_CN",UTF-8,parsed]  from "/Users/ww/mygit/myData/target/myData/WEB-INF/templates/test.ftl"

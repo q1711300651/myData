@@ -21,6 +21,14 @@ import java.security.spec.InvalidKeySpecException;
  */
 public class TestCrypt {
     @Test
+    public void testSHA1(){
+        //
+    }
+    @Test
+    public void testAES(){
+
+    }
+    @Test
     public void testDes() throws NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, NoSuchPaddingException, BadPaddingException, IllegalBlockSizeException {
       SecretKey key=initKey();
         System.out.println(">>>des.key"+fromBytesToHex(key.getEncoded())+"<<<");

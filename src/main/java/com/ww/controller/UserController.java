@@ -2,6 +2,9 @@ package com.ww.controller;
 
 import com.ww.entity.User;
 import com.ww.service.UserService;
+import freemarker.template.Configuration;
+import freemarker.template.Template;
+import freemarker.template.TemplateException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,6 +12,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.List;
 
 @Controller
@@ -21,6 +29,7 @@ public class UserController {
     @RequestMapping("/userlist.json")
     @ResponseBody
     public List<User> getUserList() {
+
         return userService.getAllUsers();
     }
 
@@ -44,9 +53,23 @@ public class UserController {
         userService.deleteAll();
     }
 
-    @RequestMapping(value = "/test")
-    public String test() {
-        return "users/test1";
+    @RequestMapping(value = "/test123")
+    public void test(HttpServletRequest request, HttpServletResponse response) throws IOException, TemplateException {
+//        String t = request.getParameter("interceptor");
+//        response.setHeader("a","aa");
+        PrintWriter writer = response.getWriter();
+//        writer.write("test.....");
+        HashMap map = new HashMap<>();
+        map.put("msg1","msg11");
+        map.put("msg2","msg22");
+        Configuration configuration = new Configuration();
+        configuration.setServletContextForTemplateLoading(request.getSession().getServletContext(),"WEB-INF/templates");
+
+        Template template = configuration.getTemplate("test.ftl");
+
+        template.process(map,writer);
+
+
     }
 
     @RequestMapping("/layout")

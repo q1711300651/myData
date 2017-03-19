@@ -9,6 +9,7 @@ public class ReadFile {
     public static void main(String[]args){
         ReadFile readFile = new ReadFile();
         String path="README.md";
+        System.out.println("rrrrrr"+new File(path).exists());
         int[] charNum = readFile.getCharNum("README.md");
         System.out.println("小写字母数量"+charNum[0]+"大写字母数量"+charNum[1]);
         try {
