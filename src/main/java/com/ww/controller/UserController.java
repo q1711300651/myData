@@ -12,10 +12,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
 
@@ -57,6 +59,10 @@ public class UserController {
     public void test(HttpServletRequest request, HttpServletResponse response) throws IOException, TemplateException {
 //        String t = request.getParameter("interceptor");
 //        response.setHeader("a","aa");
+        String ip = request.getHeader("x-forwarded-for");
+        ServletInputStream inputStream = request.getInputStream();
+        Enumeration<String> attributeNames = request.getAttributeNames();
+
         PrintWriter writer = response.getWriter();
 //        writer.write("test.....");
         HashMap map = new HashMap<>();

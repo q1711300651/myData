@@ -2,9 +2,11 @@ package algorithms;
 
 /**
  * Created by ww on 17/2/14.
+ * 汉诺塔
  */
 public class Hanoi {
     static void move(int n,String from,String to){
+
         System.out.println("from"+from+"to"+to);
     }
     static void hanoi(int n,String from,String depend,String to){

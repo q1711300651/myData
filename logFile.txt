@@ -152,3 +152,7 @@
 [http-bio-9999-exec-11] DEBUG freemarker.cache - Compiling FreeMarker template "test.ftl"["zh_CN",UTF-8,parsed]  from "/Users/ww/mygit/myData/target/myData/WEB-INF/templates/test.ftl"
 [http-bio-9999-exec-17] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
 [http-bio-9999-exec-17] DEBUG freemarker.cache - Compiling FreeMarker template "test.ftl"["zh_CN",UTF-8,parsed]  from "/Users/ww/mygit/myData/target/myData/WEB-INF/templates/test.ftl"
+[http-bio-8080-exec-6] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-8080-exec-6] DEBUG freemarker.cache - Compiling FreeMarker template "test.ftl"["zh_CN",UTF-8,parsed]  from "/Users/ww/mygit/wgbdatalog/target/myData/WEB-INF/templates/test.ftl"
+[http-bio-8080-exec-2] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=["test.ftl"["zh_CN",UTF-8,parsed] ]
+[http-bio-8080-exec-2] DEBUG freemarker.cache - Compiling FreeMarker template "test.ftl"["zh_CN",UTF-8,parsed]  from "/Users/ww/mygit/wgbdatalog/target/myData/WEB-INF/templates/test.ftl"

@@ -2,22 +2,12 @@ package TestUnit;
 
 import com.ww.entity.Customer;
 import com.ww.entity.User;
-import jxl.Cell;
-import jxl.Sheet;
-import jxl.Workbook;
-import jxl.read.biff.BiffException;
-import jxl.write.Label;
-import jxl.write.WritableSheet;
-import jxl.write.WritableWorkbook;
-import jxl.write.WriteException;
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -35,6 +25,26 @@ public class UnitTestDemo {
 
     @Before
     public void before() {
+    }
+
+    @Test
+    public void testTransferImg(){
+        File file=new File("src.png");
+        file.canRead();
+    }
+    public static void converter(File imgfile,String format,File formatFile) throws IOException{
+        imgfile.canRead();
+        BufferedImage bi = ImageIO.read(imgfile);
+        // create a blank, RGB, same width and height, and a white background
+        BufferedImage newBufferedImage = new BufferedImage(bi.getWidth(), bi.getHeight(), BufferedImage.TYPE_INT_RGB);
+        newBufferedImage.createGraphics().drawImage(bi, 0, 0, Color.WHITE, null);
+        ImageIO.write(newBufferedImage, format, formatFile);
+
+    }
+
+    public static void main(String[] args) throws Exception {
+
+        ImageUtils.converter(new File("E:\\图片1.png"),"jpg",new File("E:\\图片2.jpg"));
     }
 
     @Test
@@ -58,15 +68,20 @@ public class UnitTestDemo {
             serverSocket.accept();
             System.out.println("test" + (++num));
             System.out.println(serverSocket.getLocalPort());
-            while (true) {
-                new Thread(new Runnable() {
-                    public void run() {
-                        System.out.println();
-//                        OutputStream stream=;
-//                        stream.write("aa");
-                    }
-                }).start();
-            }
+//            while (true) {
+//                new Thread(new Runnable() {
+//                    public void run() {
+//                        System.out.println("a");
+//                        OutputStream stream=new OutputStream() {
+//                            @Override
+//                            public void write(int b) throws IOException {
+//                                write("abcd".getBytes());
+//                            }
+//                        };
+//
+//                    }
+//                }).start();
+//            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -143,88 +158,7 @@ public class UnitTestDemo {
         Method sing2 = Customer.class.getMethod("sing");
     }
 
-    /**
-     * 测试 jxl excel 导入(写)
-     */
-    @Test
-    public void test4() throws IOException, WriteException {
-        File file = new File("testjxl.xls");
-        file.createNewFile();
-        WritableWorkbook workbook = Workbook.createWorkbook(file);
-        WritableSheet test1 = workbook.createSheet("test1", 0);
-        WritableSheet test2 = workbook.createSheet("test2", 1);
-        Label label = new Label(0, 1, "test11111");
-        test1.addCell(label);
-        workbook.write();
-        workbook.close();
-    }
 
-    /**
-     * 测试jxl 导出(读)
-     */
-    @Test
-    public void test5() throws IOException, BiffException {
-        File file = new File("testjxl.xls");
-        Workbook workbook = Workbook.getWorkbook(file);
-        List<Cell> cells = new ArrayList<>();
-        int numberOfSheets = workbook.getNumberOfSheets();
-        for (int i = 0; i < numberOfSheets; i++) {
-            Sheet sheet = workbook.getSheet(i);
-            for (int j = 0; j < sheet.getRows(); j++) {
-                for (int k = 0; k < sheet.getColumns(); k++) {
-                    Cell cell = sheet.getCell(k, j);
-                    cells.add(cell);
-                    System.out.println(cell.toString());
-                }
-            }
-        }
-
-    }
-
-    /**
-     * 测试 poi 导入
-     */
-    @Test
-    public void test6() throws IOException {
-        HSSFWorkbook workbook = new HSSFWorkbook();
-        HSSFSheet sheet = workbook.createSheet();
-        String[] titles = {"id", "name", "age"};
-        HSSFRow row = sheet.createRow(0);
-        for (int i = 0; i < titles.length; i++) {
-            HSSFCell cell = row.createCell(i);
-            cell.setCellValue(titles[i]);
-        }
-        File file = new File("testpoiexcel.xls");
-        file.createNewFile();
-        OutputStream outputStream = new FileOutputStream(file);
-        workbook.write(outputStream);
-        workbook.close();
-    }
-
-    /**
-     * 测试poi 导入 excel
-     *
-     * @throws IOException
-     */
-    @Test
-    public void test8() throws IOException {
-        File file = new File("testpoiexcel.xls");
-        HSSFWorkbook workbook = new HSSFWorkbook(new FileInputStream(file));
-        if (workbook.getNumberOfSheets() > 0) {
-            HSSFSheet sheetAt = workbook.getSheetAt(0);
-            int firstRowNum = sheetAt.getFirstRowNum();
-            int lastRowNum = sheetAt.getLastRowNum();
-            for (int i = firstRowNum; i <= lastRowNum; i++) {
-                HSSFRow row = sheetAt.getRow(i);
-                short lastCellNum = row.getLastCellNum();
-                for (int j = 0; j < lastCellNum; j++) {
-                    HSSFCell cell = row.getCell(j);
-                    System.out.println(cell.getStringCellValue());
-                }
-            }
-
-        }
-    }
 
     /**
      * 测试数组相乘

@@ -20,6 +20,7 @@ public class ProxySubject implements InvocationHandler {
         System.out.println("111");
         method.invoke(subject,args);
         System.out.println("222");
+
         return null;
     }
 }
