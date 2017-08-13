@@ -1,14 +1,10 @@
 angular.module('notificationsApp', [])
-  .controller('NotificationsCtrl', function ($scope, notificationsService) {
-
-    $scope.addNotification = function () {
-      notificationsService.push($scope.notification);
-      $scope.notification = '';
-    };
-
-    $scope.getNotifications = function () {
-      return notificationsService.getCurrent();
-    };
-
-}).service('notificationsService', NotificationsService)
-  .value('notificationsArchive', new NotificationsArchive());
+  .controller('NotificationsCtrl',NotificationsCtrl)
+    .service('notificationsService', NotificationsService)
+  .value('notificationsArchive', new NotificationsArchive())
+    .config(['$routeProvider','$locationProvider', function ($routeProvider,$locationProvider) {
+        $routeProvider.when('/test',{
+        templateUrl:'test.html'
+    });
+}]);
+;

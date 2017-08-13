@@ -31,8 +31,13 @@ angular.module('location_and_include', [])
     });
   })
 
-  .controller('ListUsersCtrl', function($scope, Users){
+  .controller('ListUsersCtrl', function($scope,$location,Users){
     $scope.users = Users.query();
+    $scope.goPath=function () {
+      console.log("testgopath");
+        $location.path();
+        // console.log($location.path("http://baidu.com"));
+    };
   })
 
   .controller('NewUserCtrl', function($scope, Users){

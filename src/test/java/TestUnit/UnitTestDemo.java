@@ -5,13 +5,13 @@ import com.ww.entity.User;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,31 +27,12 @@ public class UnitTestDemo {
     public void before() {
     }
 
-    @Test
-    public void testTransferImg(){
-        File file=new File("src.png");
-        file.canRead();
-    }
-    public static void converter(File imgfile,String format,File formatFile) throws IOException{
-        imgfile.canRead();
-        BufferedImage bi = ImageIO.read(imgfile);
-        // create a blank, RGB, same width and height, and a white background
-        BufferedImage newBufferedImage = new BufferedImage(bi.getWidth(), bi.getHeight(), BufferedImage.TYPE_INT_RGB);
-        newBufferedImage.createGraphics().drawImage(bi, 0, 0, Color.WHITE, null);
-        ImageIO.write(newBufferedImage, format, formatFile);
-
-    }
-
-    public static void main(String[] args) throws Exception {
-
-        ImageUtils.converter(new File("E:\\图片1.png"),"jpg",new File("E:\\图片2.jpg"));
-    }
 
     @Test
-    public void testCollections(){
+    public void testCollections() {
         List list = new ArrayList<>();
         System.out.println(list.isEmpty());
-        List list2=null;
+        List list2 = null;
         System.out.println(list2.isEmpty());
         String a;
 //        System.out.println(a);
@@ -65,9 +46,20 @@ public class UnitTestDemo {
         try {
             int num = 0;
             ServerSocket serverSocket = new ServerSocket(9999);
-            serverSocket.accept();
+            Socket socket = serverSocket.accept();
             System.out.println("test" + (++num));
             System.out.println(serverSocket.getLocalPort());
+            socket.getInetAddress();
+            socket.getChannel();
+            InputStream inputStream = socket.getInputStream();
+            byte[] bytes = new byte[1024];
+            StringBuffer stringBuffer = new StringBuffer();
+            int len;
+            while ((len = inputStream.read(bytes)) != -1) {
+                stringBuffer.append((char) len);
+            }
+            System.out.println(stringBuffer.toString());
+
 //            while (true) {
 //                new Thread(new Runnable() {
 //                    public void run() {
@@ -86,24 +78,25 @@ public class UnitTestDemo {
             e.printStackTrace();
         }
     }
+
     /**
      * 测试list排序
      */
     @Test
-    public void testListSort(){
+    public void testListSort() {
         Class<User> userClass = User.class;
         User user1 = new User();
         Class<? extends User> aClass = user1.getClass();
 
-        List<User>users=new ArrayList<>();
-        for (int i = 0; i <5 ; i++) {
+        List<User> users = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
             User user = new User();
-            user.setUserId(i+1);
-            user.setPassword(i+"");
+            user.setUserId(i + 1);
+            user.setPassword(i + "");
             users.add(user);
         }
         System.out.println(users);
-        users=null;
+        users = null;
         List<User> collect = users.stream().filter(o1 -> o1.getUserId() > 2).collect(Collectors.toList());
 //        users.stream().sorted(comparing(User::getUserId).reversed());
 //        Collections.sort(users, new Comparator<User>() {
@@ -159,7 +152,6 @@ public class UnitTestDemo {
     }
 
 
-
     /**
      * 测试数组相乘
      */
@@ -178,13 +170,14 @@ public class UnitTestDemo {
         double naN = Double.NaN;
         System.out.println(c);
     }
+
     @Test
-    public void test13(){
-        char a='是';
+    public void test13() {
+        char a = '是';
     }
 
     @Test
-    public void test3Des(){
+    public void test3Des() {
 
     }
 }

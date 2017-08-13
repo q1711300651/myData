@@ -30,6 +30,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="stdlib (2)" level="project" />
+    <orderEntry type="library" name="algs4" level="project" />
     <orderEntry type="library" name="Maven: org.elasticsearch.client:transport:5.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.elasticsearch:elasticsearch:5.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.lucene:lucene-core:6.2.1" level="project" />
@@ -141,18 +143,9 @@
     <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.8.3" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:druid:1.0.29" level="project" />
     <orderEntry type="module-library">
-      <library name="Maven: com.alibaba:jconsole:1.8.0">
+      <library name="Maven: com.alibaba:jconsole:1.6.0">
         <CLASSES>
-          <root url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/lib/jconsole.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="Maven: com.alibaba:tools:1.8.0">
-        <CLASSES>
-          <root url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/lib/tools.jar!/" />
+          <root url="jar:///Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jconsole.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -209,5 +202,7 @@
     <orderEntry type="library" name="Maven: xpp3:xpp3_min:1.1.4c" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.8.6" level="project" />
     <orderEntry type="library" name="Maven: org.apache.axis2:axis2-transport-local:1.7.4" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.54" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpmime:4.3.4" level="project" />
   </component>
 </module>

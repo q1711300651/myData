@@ -5,6 +5,7 @@ import sun.misc.BASE64Encoder;
 
 import javax.crypto.*;
 import javax.crypto.spec.DESKeySpec;
+import javax.crypto.spec.DESedeKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 import java.io.File;
 import java.io.FileInputStream;
@@ -20,6 +21,19 @@ import java.security.spec.InvalidKeySpecException;
  * Created by ww on 17/2/23.
  */
 public class TestCrypt {
+
+
+    @Test
+    public void des() throws NoSuchPaddingException, InvalidKeyException, NoSuchAlgorithmException, IllegalBlockSizeException, BadPaddingException, InvalidAlgorithmParameterException, UnsupportedEncodingException, InvalidKeySpecException {
+        //定义密钥 AES 加密 密钥 Iccibtwicy_xykey CBC  偏移量同密钥 补位 PKCS5
+//        {"version":"0.2","name":"CIBTrust","key":"12345678",
+// "url":"http://168.3.21.155:8201/wbgxintuo/resources/download.zip"}
+        String src="";
+        String key="Iccibtwicy_xykey";
+        encyptDes(src,key);
+
+
+    }
     @Test
     public void testSHA1(){
         //
@@ -29,14 +43,18 @@ public class TestCrypt {
 
     }
     @Test
-    public void testDes() throws NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, NoSuchPaddingException, BadPaddingException, IllegalBlockSizeException {
-      SecretKey key=initKey();
-        System.out.println(">>>des.key"+fromBytesToHex(key.getEncoded())+"<<<");
-        byte[] encrypt = encrypt("aaa", key);
-        decrypt(encrypt,key);
+    public void test3Des() throws NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, NoSuchPaddingException, BadPaddingException, IllegalBlockSizeException {
+//      SecretKey key=initKey();
+//        System.out.println(">>>des.key"+fromBytesToHex(key.getEncoded())+"<<<");
+//        byte[] encrypt = encrypt("aaa", key);
+//        decrypt(encrypt,key);
         SecretKey secretKey = init3DesKey();
         System.out.println(">>>3des.key"+fromBytesToHex(secretKey.getEncoded())+"<<<");
         byte[] aaas = this.encypt3Des("aaa", secretKey);
+        BASE64Encoder encoder=new BASE64Encoder();
+//        String encode1 = encoder.encode(aaas);
+        String s = new String(aaas);
+        System.out.println(s);
         this.decrypt3Des(aaas, secretKey);
     }
     @Test
@@ -89,8 +107,19 @@ public class TestCrypt {
         }
         return builder.toString();
     }
+    
+    private SecretKey generate3DesKey(String key) throws NoSuchAlgorithmException, UnsupportedEncodingException, InvalidKeyException, InvalidKeySpecException {
+        DESedeKeySpec keySpec = new DESedeKeySpec(key.getBytes("UTF-8"));
+        SecretKeyFactory deSede = SecretKeyFactory.getInstance("DESede");
+        return deSede.generateSecret(keySpec);
+    }
 
     private SecretKey init3DesKey() throws NoSuchAlgorithmException {
+
+//        DESedeKeySpec dks = new DESedeKeySpec(key.getBytes("UTF-8"));
+//        SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("DESede");
+//        SecretKey desKey = keyFactory.generateSecret(dks);
+        
         KeyGenerator desede = KeyGenerator.getInstance("DESede");
         //desede.init(168); 可以指定112或者168 不指定默认168
         return desede.generateKey();

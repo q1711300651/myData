@@ -3,7 +3,11 @@
 /**
  * UserController
  */
-var UserController = function($scope, $http) {
+var UserController = function($scope, $http,$state) {
+    $scope.test=function () {
+        console.log("123");
+        $state.go("/login");
+    }
     $scope.fetchUsersList = function() {
         $http.get('users/userlist.json').success(function(userList){
             $scope.users = userList;

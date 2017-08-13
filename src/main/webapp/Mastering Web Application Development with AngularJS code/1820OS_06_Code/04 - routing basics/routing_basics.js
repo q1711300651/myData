@@ -28,8 +28,12 @@ angular.module('routing_basics', [])
   .controller('NavigationCtrl', function ($scope, $location) {
   })
 
-  .controller('ListUsersCtrl', function($scope, Users){
+  .controller('ListUsersCtrl', function($scope,$location,Users){
     $scope.users = Users.query();
+    $scope.goPath=function(){
+      console.log("a");
+        $location.path("admin/users/edit");
+    }
   })
 
   .controller('NewUserCtrl', function($scope, Users){

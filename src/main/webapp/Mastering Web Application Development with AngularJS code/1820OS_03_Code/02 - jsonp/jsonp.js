@@ -6,7 +6,7 @@ angular.module('jsonp', [])
       $http
         .jsonp('http://angularjs.org/greet.php?callback=JSON_CALLBACK', {
           params:{
-            name:'World'
+            name:'World',
           }
         })
         .success(function (data) {

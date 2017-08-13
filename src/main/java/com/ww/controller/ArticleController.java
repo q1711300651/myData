@@ -2,6 +2,7 @@ package com.ww.controller;
 
 import com.ww.entity.User;
 import com.ww.service.UserService;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,8 @@ public class ArticleController {
     @RequestMapping("/userlist.json")
     @ResponseBody
     public List<User> getUserList() {
+
+        MultipartEntityBuilder a;
         return userService.getAllUsers();
     }
 

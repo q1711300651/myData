@@ -65,7 +65,7 @@ public class UserController {
 
         PrintWriter writer = response.getWriter();
 //        writer.write("test.....");
-        HashMap map = new HashMap<>();
+        HashMap map = new HashMap<String,String>();
         map.put("msg1","msg11");
         map.put("msg2","msg22");
         Configuration configuration = new Configuration();

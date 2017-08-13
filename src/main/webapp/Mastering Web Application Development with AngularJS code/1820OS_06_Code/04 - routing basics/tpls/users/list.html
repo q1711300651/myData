@@ -1,4 +1,6 @@
 <div ng-controller="ListUsersCtrl">
+    <a ng-click="goPath()">aa</a>
+
     <h1>List of users</h1>
     <ul>
         <li ng-repeat="user in users"><a href="#/admin/users/edit?user={{user.id}}">{{user.name}}</a></li>

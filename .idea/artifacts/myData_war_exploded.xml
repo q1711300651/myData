@@ -168,6 +168,8 @@
           <element id="library" level="project" name="Maven: xpp3:xpp3_min:1.1.4c" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.8.6" />
           <element id="library" level="project" name="Maven: org.apache.axis2:axis2-transport-local:1.7.4" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bcprov-jdk15on:1.54" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpmime:4.3.4" />
         </element>
       </element>
       <element id="directory" name="META-INF">
