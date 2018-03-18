@@ -20,6 +20,7 @@
 //import javax.xml.namespace.QName;
 //import java.net.URL;
 //import java.text.MessageFormat;
+//import java.util.ArrayList;
 //import java.util.ResourceBundle;
 //
 //
@@ -254,6 +255,18 @@
 //
 //
 //	public static void main(String[] args) {
-//		System.out.println(WebServiceUtils.getProValByKey("webservice.portal.task.addr"));
+////		System.out.println(WebServiceUtils.getProValByKey("webservice.portal.task.addr"));
+//		ArrayList<String> strings = new ArrayList<>();
+//		ArrayList<String> inputValues = new ArrayList<>();
+//		strings.add("sText");
+//		inputValues.add("人");
+//		String webServiceAddr="http://www.webxml.com.cn/WebServices/TraditionalSimplifiedWebService.asmx?wsdl";
+//		String method="toSimplifiedChinese";
+//		String nameSpace="";
+//		Class[] returnClass=new Class[]{String.class};
+//		Object[]values=inputValues.toArray();
+//		geObjectByAxis2RPCClient(webServiceAddr,method,nameSpace,values,returnClass,"","");
+////		String webServiceAddr, String webServiceMethod, String targetNamespace,
+////				Object[] inputValues, Class<?>[] returnJavaTypes, String username, String password
 //	}
 //}

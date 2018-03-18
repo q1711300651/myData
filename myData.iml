@@ -143,9 +143,18 @@
     <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.8.3" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:druid:1.0.29" level="project" />
     <orderEntry type="module-library">
-      <library name="Maven: com.alibaba:jconsole:1.6.0">
+      <library name="Maven: com.alibaba:jconsole:1.8.0">
         <CLASSES>
-          <root url="jar:///Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jconsole.jar!/" />
+          <root url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/lib/jconsole.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: com.alibaba:tools:1.8.0">
+        <CLASSES>
+          <root url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/lib/tools.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -204,5 +213,16 @@
     <orderEntry type="library" name="Maven: org.apache.axis2:axis2-transport-local:1.7.4" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.54" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpmime:4.3.4" level="project" />
+    <orderEntry type="library" name="Maven: us.codecraft:webmagic-core:0.7.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.1" level="project" />
+    <orderEntry type="library" name="Maven: us.codecraft:xsoup:0.3.1" level="project" />
+    <orderEntry type="library" name="Maven: org.assertj:assertj-core:1.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.7.6" level="project" />
+    <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.10.3" level="project" />
+    <orderEntry type="library" name="Maven: com.jayway.jsonpath:json-path:2.4.0" level="project" />
+    <orderEntry type="library" name="Maven: net.minidev:json-smart:2.3" level="project" />
+    <orderEntry type="library" name="Maven: net.minidev:accessors-smart:1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm:5.0.4" level="project" />
+    <orderEntry type="library" name="Maven: us.codecraft:webmagic-extension:0.7.3" level="project" />
   </component>
 </module>

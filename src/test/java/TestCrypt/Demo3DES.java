@@ -26,10 +26,6 @@ import java.io.IOException;
 public class Demo3DES {
     private static final String ALGORITHM = "DESede/ECB/PKCS5Padding";
 
-
-
-
-
     public static void main(String[]args) throws IOException {
         byte[] encrypt1 = encrypt("853542176233".getBytes("UTF-8"), "hundsun1", "hundsun1", "hundsun1");
         byte[] encrypt2 = encrypt("HVMMZMKVHPVRSPVGWRTHWNMEGVEUXNZK".getBytes("UTF8"), "hundsun1", "hundsun1", "hundsun1");

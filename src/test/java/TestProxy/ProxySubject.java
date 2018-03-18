@@ -18,7 +18,7 @@ public class ProxySubject implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("111");
-        method.invoke(subject,args);
+        String invoke = (String) method.invoke(subject, args);
         System.out.println("222");
 
         return null;
